@@ -15,15 +15,15 @@ export const CustomHook = () => {
     );
 
   return (
-    <div>
-        <h1>Harry Potter's API</h1>
+    <div className="container d-flex flex-column justify-content-center">
+        <h1 className="d-flex justify-content-center">Harry Potter's API</h1>
         <hr />
         <Card title={data?.title} releaseDate={data?.releaseDate} description={data?.description} pages={data?.pages} cover={data?.cover} />
 
-
-        <button className='btn btn-primary' disabled={end} onClick = { () => {counter == 0 ? setEnd(true) : decrement(1); setEnd(false)}}>Anterior</button>
-        <button className='btn btn-primary' disabled={start} onClick = { () => {counter == 8 ? setStart(true) : increment(1); setStart(false)}}>Siguiente</button>
-      
+        <div className="d-flex justify-content-center p-5">
+          <button className='btn btn-primary' disabled={end} onClick = { () => {counter == 0 ? setEnd(true) : decrement(1); setEnd(false)}}>Anterior</button>
+          <button className='btn btn-primary' disabled={start} onClick = { () => {counter == 8 ? setStart(true) : increment(1); setStart(false)}}>Siguiente</button>
+        </div>
     </div>
   )
 }
